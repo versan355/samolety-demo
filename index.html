@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Крыло · лёгкие самолёты с документами</title>
+<meta name="description" content="Лёгкие самолёты для частных пилотов и аэроклубов: в карточке год, налёт и цена, документы и подробные фото до осмотра.">
+<link rel="canonical" href="https://{{домен}}/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Крыло · лёгкие самолёты с документами">
+<meta property="og:description" content="Год, налёт и цена в карточке каждого самолёта. Документы и фото присылаем до осмотра.">
+<meta property="og:image" content="https://{{домен}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preload" href="assets/fonts/piazzolla-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%275%27 y=%275%27 width=%2722%27 height=%2722%27 rx=%274%27 fill=%27%23c5ced8%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- шрифты: свои файлы, без Google Fonts ---------------------------- */
+  @font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 500 600; font-display: swap;
+    src: url(assets/fonts/piazzolla-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 500 600; font-display: swap;
+    src: url(assets/fonts/piazzolla-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
+  @font-face { font-family: "Piazzolla"; font-style: italic; font-weight: 500; font-display: swap;
+    src: url(assets/fonts/piazzolla-italic-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Piazzolla"; font-style: italic; font-weight: 500; font-display: swap;
+    src: url(assets/fonts/piazzolla-italic-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 600; font-display: swap;
+    src: url(assets/fonts/manrope-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 600; font-display: swap;
+    src: url(assets/fonts/manrope-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
+
+  /* ---- тема: палитра А «графит и серебро» -------------------------------- */
+  .v-page {
+    --v-canvas: #121417; --v-surface: #1a1d22;
+    --v-ink: #e9ecef; --v-ink-soft: #a9b0b8;
+    --v-accent: #c5ced8; --v-accent-ink: #12161b;
+    --v-font-display: "Piazzolla", "Georgia", "Times New Roman", serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 4 6 9;
+    --v-radius: 10px;
+  }
+  html, body { background: #121417; }
+  .v-page .v-display { font-weight: 600; letter-spacing: -0.015em; }
+  .v-page .v-display--xl { line-height: .98; }
+  .v-page .v-display em { font-style: italic; font-weight: 500; color: var(--v-accent); }
+  .v-page .v-lede { font-weight: 500; }
+  .v-page [id] { scroll-margin-top: 5rem; }
+  .tap { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+  @media (max-width: 760px) {
+    .v-page { --v-t-sm: 1rem; --v-t-xs: 0.8125rem; }
+  }
+
+  /* ---- шапка ------------------------------------------------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between;
+    padding: var(--v-3) var(--v-gutter); gap: var(--v-4);
+    background: linear-gradient(to bottom, rgb(18 20 23 / .88), rgb(18 20 23 / 0));
+    transition: background-color .24s var(--v-ease-out), box-shadow .24s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(18 20 23); box-shadow: 0 1px 0 rgb(233 236 239 / .10), 0 8px 24px rgb(4 6 9 / .35); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-base); letter-spacing: 0; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; min-height: 44px; }
+  .bar__mark i { width: .7em; height: .7em; border-radius: 2px; background: var(--v-accent); display: inline-block; transform: rotate(45deg); }
+  .bar__right { display: flex; align-items: center; gap: var(--v-5); }
+  .bar__nav { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .bar__nav a { color: var(--v-ink-soft); }
+  @media (hover: hover) and (pointer: fine) { .bar__nav a:hover { color: var(--v-ink); } }
+  @media (max-width: 900px) { .bar__nav { display: none; } }
+  @media (max-width: 760px) { .bar .v-btn { padding: .75em 1.1em; font-size: .9375rem; } }
+
+  /* ---- hero: ангар, самолёт внизу, текст по центру сверху ----------------- */
+  .hero__back img { width: 112%; height: 120%; left: -6%; top: 7%; object-fit: cover; object-position: 50% 50%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%); mask-image: linear-gradient(to bottom, transparent 0%, #000 14%); }
+  .hero__floor { position: absolute; inset: auto 0 0 0; height: 30%; z-index: 2; pointer-events: none;
+    background: linear-gradient(to top, var(--v-canvas) 0%, rgb(18 20 23 / .55) 50%, transparent 100%); }
+  .hero__veil { position: absolute; inset: 0 0 auto 0; height: 58%; z-index: 2; pointer-events: none;
+    background: linear-gradient(to bottom, rgb(18 20 23 / .6) 0%, rgb(18 20 23 / .35) 55%, transparent 100%); }
+  .hero__copy { position: absolute; z-index: 3; left: var(--v-gutter); right: var(--v-gutter); top: clamp(6rem, 14vh, 9rem);
+    text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .hero__copy .v-display { font-size: var(--v-t-3xl); max-width: 24ch; }
+  .hero__copy .v-display .v-k:nth-of-type(2) .v-ki { font-style: italic; font-weight: 500; color: var(--v-accent); }
+  .hero__rest { display: flex; flex-direction: column; align-items: inherit; }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 46ch; color: var(--v-ink); opacity: .92; }
+  .hero__cta { margin-top: var(--v-6); }
+  .hero__note { position: absolute; z-index: 3; left: var(--v-gutter); right: var(--v-gutter); bottom: clamp(2rem, 6vh, 4rem);
+    display: flex; gap: var(--v-3) var(--v-8); flex-wrap: wrap; }
+  .hero__note > div { display: grid; gap: .15em; }
+  .hero__note .v-label { color: var(--v-ink-soft); }
+  .hero__note .v-nums { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); line-height: 1.1; }
+  @media (max-height: 820px) and (min-width: 761px) {
+    .hero__copy { top: 5.25rem; }
+    .hero__copy .v-display { font-size: var(--v-t-2xl); }
+  }
+  @media (max-width: 1000px) and (min-width: 761px) {
+    .hero__note { right: 36%; gap: var(--v-3) var(--v-6); }
+  }
+  @media (max-width: 760px) {
+    .hero__back img { width: 200%; height: auto; left: -60%; top: auto; bottom: 4vh; object-fit: unset;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 40%); mask-image: linear-gradient(to bottom, transparent 0%, #000 40%); }
+    .hero__veil { display: none; }
+    .hero__floor { height: 14%; }
+    .hero__copy { top: clamp(5.25rem, 12vh, 7rem); align-items: flex-start; text-align: left; }
+    .hero__copy .v-display { font-size: var(--v-t-2xl); }
+    .hero__copy .v-lede { max-width: 32ch; }
+    .hero__note { display: none; }
+  }
+
+  /* ---- фирменный ход: каталог, четыре самолёта в одном ангаре ------------- */
+  .conf { position: absolute; inset: 0; }
+  .v-page .conf__img { position: absolute; inset: 0 -6% -16% -6%; width: 112%; max-width: none; height: 116%; object-fit: cover; object-position: 50% 62%; will-change: opacity; }
+  .v-page .conf__img + .conf__img { opacity: 0; }
+  .conf__shade { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(100deg, rgb(18 20 23 / .82) 0%, rgb(18 20 23 / .45) 38%, transparent 62%); }
+  .conf__top { position: absolute; z-index: 3; left: var(--v-gutter); right: var(--v-gutter); top: clamp(5.5rem, 13vh, 8rem); }
+  .conf__top > div:first-child, .conf__rep { max-width: 40rem; }
+  .conf__top .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .conf__top .v-display { margin-bottom: var(--v-5); }
+  .conf__rep { position: relative; min-height: 10rem; }
+  .conf__rep > div { position: absolute; left: 0; top: 0; max-width: 34rem; }
+  .conf__rep h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-xl); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: var(--v-2); }
+  .conf__rep p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 42ch; }
+  .conf__rep p b { color: var(--v-ink); font-weight: 500; }
+  .conf__rep .price { display: block; margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink); }
+  .conf__rep .price b { color: var(--v-accent); font-weight: 600; }
+  .sw { position: absolute; z-index: 3; right: 0; top: 0; display: grid; gap: var(--v-3); }
+  .sw__btn { display: flex; align-items: center; justify-content: flex-end; gap: var(--v-3); padding: 0; min-height: 44px; text-align: right; }
+  .sw__btn span { font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); transition: color .18s var(--v-ease-out), opacity .18s var(--v-ease-out); opacity: .6; }
+  .sw__btn i { position: relative; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--v-surface); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .18), 0 0 0 2px transparent, var(--v-e1);
+    transition: box-shadow .18s var(--v-ease-out), transform .18s var(--v-ease-out); }
+  .sw__btn i::after { content: attr(data-n); position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--v-font-display); font-style: italic; font-size: 1.05rem; color: var(--v-ink-soft); }
+  .sw__btn.is-on span { color: var(--v-ink); opacity: 1; }
+  .sw__btn.is-on i { background: var(--v-accent); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .18), 0 0 0 2px var(--v-accent), var(--v-e1); transform: scale(1.1); }
+  .sw__btn.is-on i::after { color: var(--v-accent-ink); }
+  @media (hover: hover) and (pointer: fine) { .sw__btn:hover span { color: var(--v-ink); opacity: 1; } .sw__btn:hover i { transform: scale(1.06); } }
+  .conf__cta { position: absolute; z-index: 3; left: var(--v-gutter); bottom: clamp(2.5rem, 8vh, 5rem); }
+  @media (max-width: 760px) {
+    .v-page .conf__img { inset: auto -50% 0 -50%; width: 200%; height: auto; object-fit: unset;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 34%); mask-image: linear-gradient(to bottom, transparent 0%, #000 34%); }
+    .conf__shade { display: none; }
+    .conf__top { right: var(--v-gutter); max-width: none; top: clamp(4.5rem, 10vh, 6rem); }
+    .conf__top .v-display { margin-bottom: var(--v-4); }
+    .conf__rep { min-height: 12rem; }
+    .conf__rep h3 { font-size: var(--v-t-lg); }
+    .sw { position: relative; top: auto; right: auto; margin-top: var(--v-3); grid-auto-flow: column; justify-content: start; gap: var(--v-3); }
+    .sw__btn { flex-direction: column; gap: var(--v-2); min-width: 48px; min-height: 48px; padding: 4px 6px; text-align: center; justify-content: flex-start; }
+    .sw__btn span { font-size: .75rem; letter-spacing: .04em; }
+    .conf__cta { display: none; }
+  }
+
+  /* ---- что в карточке: три строки с пометкой справа ----------------------- */
+  .price { display: grid; grid-template-columns: .8fr 1.4fr; gap: var(--v-9); align-items: start; }
+  .price__head .v-body { color: var(--v-ink-soft); margin-top: var(--v-4); }
+  .price__rows li { display: grid; grid-template-columns: 1fr auto; gap: var(--v-2) var(--v-6); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); align-items: start; }
+  .price__rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .price__rows h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; }
+  .price__rows p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 44ch; }
+  .price__rows .sum { grid-column: 2; grid-row: 1 / span 2; font-family: var(--v-font-display); font-weight: 500; font-style: italic; font-size: var(--v-t-lg); line-height: 1.1; color: var(--v-accent); text-align: right; white-space: nowrap; }
+  .price__rows .sum small { display: block; font-family: var(--v-font-text); font-style: normal; font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); margin-top: .35em; }
+  .price__note { margin-top: var(--v-5); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 60ch; }
+  .price__note b { color: var(--v-ink); font-weight: 500; }
+  .price > * { min-width: 0; }
+  @media (max-width: 1000px) {
+    .price { grid-template-columns: 1fr; gap: var(--v-6); }
+    .price__rows li { grid-template-columns: 1fr; }
+    .price__rows .sum { grid-column: 1; grid-row: auto; text-align: left; white-space: normal; margin-top: var(--v-2); }
+  }
+
+  /* ---- фото без подмены: факты строками + три макро с шторками ------------ */
+  .mat { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--v-9); align-items: start; }
+  .mat__facts li { padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-2); }
+  .mat__facts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .mat__facts h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; }
+  .mat__facts p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 46ch; }
+  .mat__figs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-5); align-items: start; }
+  .mat__figs figure { position: relative; border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--v-e2), var(--v-edge); }
+  .mat__figs figure img { width: 100%; height: 100%; object-fit: cover; }
+  .mat__figs figure:nth-child(2) { margin-top: var(--v-9); }
+  .mat__figs figure:nth-child(3) { margin-top: calc(-1 * var(--v-8)); }
+  .mat__figs figcaption { position: absolute; left: var(--v-4); right: var(--v-4); top: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); }
+  @media (max-width: 760px) {
+    .mat { grid-template-columns: 1fr; gap: var(--v-7); }
+    .mat__figs { gap: var(--v-4); }
+    .mat__figs figure:nth-child(2) { margin-top: var(--v-7); }
+    .mat__figs figure:nth-child(3) { margin-top: calc(-1 * var(--v-6)); }
+  }
+
+  /* ---- что проверить до покупки: раскрывающиеся строки -------------------- */
+  .exp { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--v-7) var(--v-9); align-items: start; }
+  .exp__head .v-display { max-width: 14ch; }
+  .exp__list { grid-column: 1 / -1; }
+  .exp__row { border-top: 1px solid var(--v-hair); }
+  .exp__row:last-child { border-bottom: 1px solid var(--v-hair); }
+  .exp__row summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: var(--v-6); align-items: center; padding: var(--v-5) 0; min-height: 44px; }
+  .exp__row summary::-webkit-details-marker { display: none; }
+  .exp__row summary:focus-visible { outline-offset: -3px; }
+  .exp__q { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; max-width: 34ch; text-wrap: balance; }
+  .exp__plus { position: relative; width: 2.25rem; height: 2.25rem; border-radius: 50%; flex: none; box-shadow: inset 0 0 0 1px var(--v-hair-strong); transition: transform .24s var(--v-ease-out), box-shadow .18s var(--v-ease-out); }
+  .exp__plus::before, .exp__plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 2px; background: var(--v-ink); transform: translate(-50%, -50%); }
+  .exp__plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+  .exp__row[open] .exp__plus { transform: rotate(45deg); box-shadow: inset 0 0 0 1px var(--v-accent); }
+  .exp__row[open] .exp__plus::before, .exp__row[open] .exp__plus::after { background: var(--v-accent); }
+  @media (hover: hover) and (pointer: fine) { .exp__row summary:hover .exp__plus { transform: scale(1.06); } .exp__row[open] summary:hover .exp__plus { transform: rotate(45deg) scale(1.06); } }
+  .exp__a { display: grid; grid-template-columns: 11rem 1fr; gap: var(--v-4) var(--v-6); padding: 0 0 var(--v-6); max-width: 64rem; animation: exp-in .32s var(--v-ease-out) both; }
+  .exp__how { color: var(--v-accent); padding-top: .3em; }
+  .exp__a p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 58ch; text-wrap: pretty; }
+  @keyframes exp-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .exp__end { grid-column: 2; margin-top: var(--v-2); font-family: var(--v-font-display); font-weight: 500; font-style: italic; font-size: var(--v-t-xl); line-height: 1.25; letter-spacing: -0.01em; max-width: 26ch; text-wrap: pretty; }
+  .exp__end b { color: var(--v-accent); font-weight: 500; }
+  @media (max-width: 1000px) { .exp__a { grid-template-columns: 1fr; gap: var(--v-2); } .exp__how { padding-top: 0; } }
+  @media (max-width: 760px) {
+    .exp { grid-template-columns: 1fr; gap: var(--v-6); }
+    .exp__head .v-display { max-width: none; }
+    .exp__row summary { gap: var(--v-4); padding: var(--v-4) 0; }
+    .exp__q { font-size: var(--v-t-base); }
+    .exp__a { padding-bottom: var(--v-5); }
+    .exp__end { grid-column: 1; font-size: var(--v-t-lg); }
+  }
+  @media (prefers-reduced-motion: reduce) { .exp__a { animation-duration: .01s; } .exp__plus { transition: none; } }
+
+  /* ---- как купить: четыре шага -------------------------------------------- */
+  .steps { display: grid; grid-template-columns: .9fr 1.3fr; gap: var(--v-9); align-items: start; }
+  .steps__head { position: sticky; top: clamp(5rem, 14vh, 8rem); }
+  .steps__head .v-body { color: var(--v-ink-soft); margin-top: var(--v-4); }
+  .steps__head .v-body b { color: var(--v-ink); font-weight: 500; }
+  .steps__list li { display: grid; grid-template-columns: 4.5rem 1fr; gap: var(--v-4); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); align-items: start; }
+  .steps__list li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .steps__list .num { font-family: var(--v-font-display); font-weight: 500; font-style: italic; font-size: var(--v-t-2xl); line-height: 1; color: var(--v-accent); }
+  .steps__list h3 { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: var(--v-2); }
+  .steps__list p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 48ch; }
+  .steps__list p b { color: var(--v-ink); font-weight: 500; }
+  @media (max-width: 760px) {
+    .steps { grid-template-columns: 1fr; gap: var(--v-7); }
+    .steps__head { position: static; }
+    .steps__list li { grid-template-columns: 3rem 1fr; }
+    .steps__list .num { font-size: var(--v-t-xl); }
+  }
+
+  /* ---- финал: по центру, свет за курсором --------------------------------- */
+  .close { height: 100%; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(56rem 38rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .45) * 100%), rgb(197 206 216 / .12), transparent 62%); }
+  .close__inner { align-self: center; text-align: center; display: flex; flex-direction: column; align-items: center; padding-top: var(--v-9); }
+  .close__inner .v-display { max-width: 20ch; }
+  .close__inner .v-lede { margin: var(--v-5) auto 0; max-width: 42ch; color: var(--v-ink-soft); }
+  .close__cta { margin-top: var(--v-7); }
+  .close__hint { margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .close__meta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 var(--v-7); margin-top: var(--v-6); color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .close__meta a { color: var(--v-ink); font-weight: 600; }
+  .close__meta b { color: var(--v-ink); font-weight: 500; }
+  .foot { display: flex; justify-content: space-between; gap: var(--v-2) var(--v-4); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); color: var(--v-ink-soft); flex-wrap: wrap; }
+  @media (max-width: 760px) {
+    .close__inner { padding-top: var(--v-7); }
+    .close__inner .v-lede { max-width: 32ch; margin-top: var(--v-4); }
+    .close__cta { margin-top: var(--v-5); }
+    .close__hint { margin-top: var(--v-2); }
+    .close__meta { flex-direction: column; gap: 0; margin-top: var(--v-3); }
+    .foot { padding: var(--v-4) 0; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+  <div class="v-grain" aria-hidden="true"></div>
+
+  <header class="bar" id="bar">
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Крыло</a>
+    <div class="bar__right">
+      <nav class="bar__nav" aria-label="Разделы">
+        <a class="tap" href="#katalog">Самолёты</a>
+        <a class="tap" href="#kartochka">Что в карточке</a>
+        <a class="tap" href="#kak">Как купить</a>
+      </nav>
+      <a class="v-btn" href="#zapros">Запросить подробности</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1 · УЗНАВАНИЕ: ангар ночью, самолёт под одним светом -->
+    <section data-v-act="pin" data-v-span="1.6" data-v-drift="#121417" aria-label="Лёгкие самолёты с документами">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.7">
+          <img src="assets/plane-1.webp" alt="" width="1920" height="1067">
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__floor" aria-hidden="true"></div>
+
+        <div class="hero__copy">
+          <h1 class="v-display v-display--xl" data-v-cue="0 0.85 0" data-v-kinetic="lines" data-hero-cue>Лёгкие самолёты для частных пилотов и аэроклубов – с документами</h1>
+          <div class="hero__rest" data-v-cue="0 0.85 0" data-v-rise="0" data-hero-cue>
+            <p class="v-lede">Год, налёт и цена в карточке каждого самолёта. Документы и фото присылаем до осмотра: что на снимке, то и купите.</p>
+            <div class="hero__cta"><a class="v-btn" href="#zapros">Запросить подробности</a></div>
+          </div>
+        </div>
+
+        <div class="hero__note" data-v-cue="0 0.7 0" data-v-rise="0" data-hero-cue>
+          <div><span class="v-label">В карточке</span><span class="v-nums">год · налёт · цена</span></div>
+          <div><span class="v-label">Документы</span><span class="v-nums">до осмотра</span></div>
+          <div><span class="v-label">Фото</span><span class="v-nums">свет и фон, без подмены</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ВЫБОР: каталог, четыре самолёта в одном ангаре (фирменный ход) -->
+    <section data-v-act="pin" data-v-span="2.6" data-v-drift="#15181c" id="katalog" aria-label="Самолёты в продаже">
+      <div data-v-stage>
+        <div class="conf" aria-hidden="true">
+          <img class="conf__img" src="assets/plane-1.webp" alt="" width="1920" height="1067">
+          <img class="conf__img" src="assets/plane-2.webp" alt="" width="1920" height="1067" loading="lazy">
+          <img class="conf__img" src="assets/plane-3.webp" alt="" width="1920" height="1067" loading="lazy">
+          <img class="conf__img" src="assets/plane-4.webp" alt="" width="1920" height="1067" loading="lazy">
+        </div>
+        <div class="conf__shade" aria-hidden="true"></div>
+
+        <div class="conf__top">
+          <div data-v-cue="0 1 0 0" data-v-rise="0">
+            <span class="v-label">Самолёты в продаже</span>
+            <h2 class="v-display v-display--md">Один ангар. Четыре самолёта.</h2>
+          </div>
+          <div class="conf__rep">
+            <div data-v-cue="0 0.19 0 0.07">
+              <h3>Четырёхместный верхнеплан</h3>
+              <p><b>Модель и год:</b> {{модель 1}}. <b>Налёт:</b> {{налёт 1}} ч. Крыло над кабиной: хороший обзор вниз, спокойный в пилотировании, для полётов с семьёй и обучения.</p>
+              <span class="price v-nums">Цена: <b>по запросу</b></span>
+            </div>
+            <div data-v-cue="0.17 0.5 0.07 0.07">
+              <h3>Четырёхместный низкоплан</h3>
+              <p><b>Модель и год:</b> {{модель 2}}. <b>Налёт:</b> {{налёт 2}} ч. Крыло под кабиной: быстрее на маршруте, удобная посадка в кабину с крыла.</p>
+              <span class="price v-nums">Цена: <b>по запросу</b></span>
+            </div>
+            <div data-v-cue="0.48 0.83 0.07 0.07">
+              <h3>Двухмоторный, шесть мест</h3>
+              <p><b>Модель и год:</b> {{модель 3}}. <b>Налёт:</b> {{налёт 3}} ч. Два двигателя для дальних маршрутов и полётов над водой и лесом.</p>
+              <span class="price v-nums">Цена: <b>по запросу</b></span>
+            </div>
+            <div data-v-cue="0.81 2 0.07 0">
+              <h3>Лёгкая амфибия</h3>
+              <p><b>Модель и год:</b> {{модель 4}}. <b>Налёт:</b> {{налёт 4}} ч. Садится на воду и на полосу: для рыбалки, охоты и озёр без аэродрома.</p>
+              <span class="price v-nums">Цена: <b>по запросу</b></span>
+            </div>
+          </div>
+
+          <div class="sw" role="group" aria-label="Выбор самолёта">
+            <button class="sw__btn is-on" type="button" data-sw="0"><span>Верхнеплан</span><i data-n="1" aria-hidden="true"></i></button>
+            <button class="sw__btn" type="button" data-sw="1"><span>Низкоплан</span><i data-n="2" aria-hidden="true"></i></button>
+            <button class="sw__btn" type="button" data-sw="2"><span>Двухмоторный</span><i data-n="3" aria-hidden="true"></i></button>
+            <button class="sw__btn" type="button" data-sw="3"><span>Амфибия</span><i data-n="4" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div class="conf__cta">
+          <a class="v-btn" href="#zapros" data-v-cue="0.6 0.99 0.06 0.03">Запросить подробности</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ПОВОРОТ: что в карточке каждого самолёта -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#121417" id="kartochka" aria-label="Что в карточке самолёта">
+      <div class="v-wrap price">
+        <div class="price__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Что в карточке самолёта</h2>
+          <p class="v-body">Самолёт – дорогая покупка, и решать её по одной красивой фотографии нельзя. Поэтому по каждому борту собираем одно и то же, чтобы модели можно было сравнить.</p>
+        </div>
+        <div data-v-in data-v-stagger="80">
+          <ul class="price__rows">
+            <li>
+              <h3>Характеристики</h3>
+              <p>Модель, год выпуска, налёт планера и двигателя, остаток ресурса, число мест, оборудование кабины.</p>
+              <span class="sum">цифрами<small>в карточке</small></span>
+            </li>
+            <li>
+              <h3>Документы и история</h3>
+              <p>Документы на самолёт, формуляры, история владения и ремонтов. Присылаем по запросу до того, как вы поедете смотреть.</p>
+              <span class="sum">до осмотра<small>по запросу</small></span>
+            </li>
+            <li>
+              <h3>Цена</h3>
+              <p>Указываем открыто или пишем «по запросу», если продавец просит не публиковать. Ответ на запрос – с ценой, а не «звоните».</p>
+              <span class="sum">открыто<small>или по запросу</small></span>
+            </li>
+          </ul>
+          <p class="price__note">Чего нет в карточке – уточним у владельца и ответим <b>письменно</b>, чтобы слова можно было сверить с документами.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ДОКАЗАТЕЛЬСТВО: фото без подмены -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#101316" id="foto" aria-label="Фото без подмены">
+      <div class="v-wrap mat">
+        <div class="v-stack" data-v-in data-v-stagger="60">
+          <h2 class="v-display v-display--lg">Фото без подмены</h2>
+          <p class="v-body v-soft">На фото самолёт один, вживую другой – главный страх покупателя. Поэтому правило простое: что на снимке, то и стоит в ангаре.</p>
+          <ul class="mat__facts">
+            <li><h3>Обрабатываем только свет и фон</h3><p>Выравниваем экспозицию и убираем лишнее за самолётом. Сам борт, краску, царапины и потёртости не трогаем.</p></li>
+            <li><h3>Детали крупным планом</h3><p>Обшивка, винт, шасси, кабина: по каждому самолёту отдельная серия снимков, а не один парадный ракурс.</p></li>
+            <li><h3>Видео и осмотр вживую</h3><p>По запросу снимаем видео с запуском двигателя и договариваемся об осмотре на месте стоянки.</p></li>
+          </ul>
+        </div>
+        <div class="mat__figs">
+          <figure data-v-reveal="up" data-v-reveal-at="0.12 0.42">
+            <img src="assets/rivets.webp" alt="Заклёпки на обшивке крыла крупным планом" width="1200" height="1600" loading="lazy">
+            <figcaption>Обшивка крыла</figcaption>
+          </figure>
+          <figure data-v-reveal="left" data-v-reveal-at="0.2 0.5">
+            <img src="assets/propeller.webp" alt="Кок и лопасти воздушного винта" width="1200" height="1600" loading="lazy">
+            <figcaption>Винт</figcaption>
+          </figure>
+          <figure data-v-reveal="up" data-v-reveal-at="0.3 0.6">
+            <img src="assets/gear.webp" alt="Колесо основной стойки шасси" width="1200" height="1600" loading="lazy">
+            <figcaption>Шасси</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ГОЛОС: что проверить до покупки -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#15181c" id="proverka" aria-label="Что проверить до покупки">
+      <div class="v-wrap exp">
+        <div class="exp__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Что проверить <em>до</em> покупки</h2>
+        </div>
+        <div class="exp__intro" data-v-in data-v-stagger="80">
+          <p class="v-body">Пять вопросов, которые стоит задать про любой самолёт – у нас или у другого продавца. Если ответа нет, это тоже ответ.</p>
+        </div>
+        <div class="exp__list" data-v-in data-v-stagger="70">
+          <details class="exp__row" open>
+            <summary><span class="exp__q">Совпадает ли налёт в объявлении и в формулярах</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как у нас</span><p>Налёт в карточке берём из формуляров, а не со слов владельца. Скан страницы присылаем вместе с карточкой.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Сколько ресурса осталось у двигателя</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как у нас</span><p>Указываем наработку после последнего ремонта и остаток до следующего: от этого зависит, сколько вы вложите в первые годы.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Были ли повреждения и серьёзные ремонты</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как у нас</span><p>Спрашиваем владельца письменно и сверяем с записями в документах. Что известно – пишем в карточке прямо, без «мелких нюансов».</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Все ли документы на месте</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как у нас</span><p>Список документов по самолёту присылаем до осмотра, чтобы вы или ваш техник успели его проверить заранее.</p></div>
+          </details>
+          <details class="exp__row">
+            <summary><span class="exp__q">Можно ли посмотреть самолёт вживую</span><i class="exp__plus" aria-hidden="true"></i></summary>
+            <div class="exp__a"><span class="v-label exp__how">Как у нас</span><p>Да. Договариваемся об осмотре на месте стоянки, можно приехать со своим техническим специалистом.</p></div>
+          </details>
+        </div>
+        <p class="exp__end" data-v-in data-v-in-self>Самолёт покупают не на год. Хочется, чтобы <b>первый полёт</b> был радостью, а не разбором документов.</p>
+      </div>
+    </section>
+
+    <!-- 6 · ПУТЬ: как купить -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#101316" id="kak" aria-label="Как купить">
+      <div class="v-wrap steps">
+        <div class="steps__head" data-v-in data-v-in-self>
+          <h2 class="v-display v-display--lg">Как купить</h2>
+          <p class="v-body">Четыре шага от запроса до передачи самолёта. <b>Документы</b> до осмотра, <b>условия</b> в договоре.</p>
+        </div>
+        <ol class="steps__list" data-v-in data-v-stagger="90">
+          <li><span class="num">1</span><div><h3>Запрос</h3><p>Пишете, какой самолёт интересует или под какие задачи: обучение, путешествия, работа. Отвечаем карточкой с ценой.</p></div></li>
+          <li><span class="num">2</span><div><h3>Документы и подробные фото</h3><p>Присылаем документы, серию фото и видео по запросу. <b>До осмотра</b> вы знаете о самолёте всё, что знаем мы.</p></div></li>
+          <li><span class="num">3</span><div><h3>Осмотр вживую</h3><p>Смотрите самолёт на месте стоянки, можно со своим техником.</p></div></li>
+          <li><span class="num">4</span><div><h3>Договор и передача</h3><p>Цена и условия передачи – <b>в договоре</b>. После оплаты передаём самолёт и документы.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ: запрос подробностей -->
+    <section data-v-act="pin" data-v-span="1.4" data-v-drift="#15181c" id="zapros" aria-label="Запросить подробности">
+      <div data-v-stage>
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <h2 class="v-display v-display--lg" data-v-cue="0 2 0 0" data-v-kinetic="lines">Запросите подробности по самолёту</h2>
+            <p class="v-lede" data-v-cue="0 2 0 0">Напишите, какой самолёт смотрите или под какие задачи ищете. Ответим карточкой с ценой и пришлём документы.</p>
+            <div class="close__cta" data-v-cue="0 2 0 0" data-v-rise="0">
+              <a class="v-btn" href="#zapros" data-href="{{ссылка-записи}}" data-v-magnet="0.22">Запросить подробности</a>
+            </div>
+            <p class="close__hint" data-v-cue="0 2 0 0" id="zapros-hint">Можно спросить и про самолёт, которого нет в каталоге.</p>
+            <div class="close__meta" data-v-cue="0 2 0 0">
+              <a class="tap" href="#zapros" data-href="tel:{{телефон}}">{{телефон}}</a>
+              <span class="tap">Стоянка: <b>&nbsp;{{адрес}}</b></span>
+              <span class="tap">{{часы}}</span>
+            </div>
+          </div>
+          <footer class="foot">
+            <span>Крыло · {{город}} · {{реквизиты}}</span>
+            <span>Лёгкие самолёты с документами и честными фото</span>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  (function () {
+    // На телефоне текст hero не гаснет до конца сцены: реплики «встречают» и держатся.
+    if (window.matchMedia('(max-width: 760px)').matches) {
+      document.querySelectorAll('[data-hero-cue]').forEach(function (el) { el.setAttribute('data-v-cue', '0 1 0 0'); });
+    }
+    // Слоты ссылок: пока в data-href стоит {{…}}, ссылка не уводит на несуществующую страницу,
+    // а показывает подсказку. Заполнили слот – ссылка работает как обычная.
+    var hint = document.getElementById('zapros-hint');
+    document.querySelectorAll('a[data-href]').forEach(function (a) {
+      var href = a.getAttribute('data-href') || '';
+      if (href && href.indexOf('{{') === -1) { a.href = href; return; }
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (hint) hint.textContent = 'Это демо: здесь будет ссылка на мессенджер или телефон продавца.';
+      });
+    });
+  })();
+
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: плотный фон, как только уехал первый экран.
+  (function () {
+    var bar = document.getElementById('bar'), on = null;
+    function check() { var s = window.scrollY > 80; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', check, { passive: true }); check();
+  })();
+
+  // Фирменный ход: каталог. Четыре самолёта в одном ангаре лежат друг на друге,
+  // прозрачность трёх верхних ведётся от --v-p акта: плато на каждом самолёте, кроссфейд между ними.
+  (function () {
+    var act = document.getElementById('katalog');
+    var imgs = act.querySelectorAll('.conf__img');
+    var sws = act.querySelectorAll('.sw__btn');
+    var live = false, lastF = -1, lastN = -1;
+    var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function ss(t) { t = t < 0 ? 0 : t > 1 ? 1 : t; return t * t * (3 - 2 * t); }
+    function paint(f) {
+      for (var i = 1; i < imgs.length; i++) { var o = f - (i - 1); imgs[i].style.opacity = (o < 0 ? 0 : o > 1 ? 1 : o).toFixed(3); }
+      var n = Math.round(f);
+      if (n !== lastN) { lastN = n; sws.forEach(function (s, i) { s.classList.toggle('is-on', i === n); s.setAttribute('aria-pressed', i === n); }); }
+    }
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      var x = p * 3, k = Math.min(Math.floor(x), 2), f = k + ss((x - k - 0.35) / 0.3);
+      if (f !== lastF) { lastF = f; paint(f); }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    tick();
+    var stops = [0.04, 0.333, 0.667, 0.96];
+    sws.forEach(function (s, i) {
+      s.addEventListener('click', function () {
+        var top = act.getBoundingClientRect().top + window.scrollY;
+        var y = top + (act.offsetHeight - window.innerHeight) * stops[i];
+        window.scrollTo({ top: y, behavior: RM ? 'instant' : 'smooth' });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
